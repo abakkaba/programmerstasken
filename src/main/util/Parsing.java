@@ -25,10 +25,10 @@ public class Parsing {
     public static String parse(List<String> input) {
         for (int i = 0; i < input.size(); i++) {
             String[] fields = input.get(i).split(SPACE);
-            if (fields[0].equals(TIME_LINE)) {
+            if (fields[LINE_TYPE].equals(TIME_LINE)) {
                 timeLines.add(new TimeLine(i, fields[SERVICE_ID], fields[QUESTION_TYPE], fields[RESPONSE_TYPE],
                                            fields[RESPONSE_DATE], fields[WAITING_TIME]));
-            } else if (fields[0].equals(QUERY_LINE)) {
+            } else if (fields[LINE_TYPE].equals(QUERY_LINE)) {
                 analyze(new QueryLine(i, fields[SERVICE_ID], fields[QUESTION_TYPE], fields[RESPONSE_TYPE],
                                       fields[RESPONSE_DATE]));
             }

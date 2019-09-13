@@ -12,6 +12,7 @@ public class Constants {
     public static final String HYPHEN = "-";
     public static final Date MAX_DATE = new Date(Long.MAX_VALUE);
 
+    static final int LINE_TYPE = 0;
     static final int SERVICE_ID = 1;
     static final int QUESTION_TYPE = 2;
     static final int RESPONSE_TYPE = 3;
