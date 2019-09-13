@@ -26,9 +26,11 @@ public class Parsing {
         for (int i = 0; i < input.size(); i++) {
             String[] fields = input.get(i).split(SPACE);
             if (fields[0].equals(TIME_LINE)) {
-                timeLines.add(new TimeLine(i, fields[1], fields[2], fields[3], fields[4], fields[5]));
+                timeLines.add(new TimeLine(i, fields[SERVICE_ID], fields[QUESTION_TYPE], fields[RESPONSE_TYPE],
+                                           fields[RESPONSE_DATE], fields[WAITING_TIME]));
             } else if (fields[0].equals(QUERY_LINE)) {
-                analyze(new QueryLine(i, fields[1], fields[2], fields[3], fields[4]));
+                analyze(new QueryLine(i, fields[SERVICE_ID], fields[QUESTION_TYPE], fields[RESPONSE_TYPE],
+                                      fields[RESPONSE_DATE]));
             }
         }
         return output.toString();

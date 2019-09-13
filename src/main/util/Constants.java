@@ -12,6 +12,12 @@ public class Constants {
     public static final String HYPHEN = "-";
     public static final Date MAX_DATE = new Date(Long.MAX_VALUE);
 
+    static final int SERVICE_ID = 1;
+    static final int QUESTION_TYPE = 2;
+    static final int RESPONSE_TYPE = 3;
+    static final int RESPONSE_DATE = 4;
+    static final int WAITING_TIME = 5;
+
     static final String SPACE = " ";
     static final String ASTERISK = "*";
     static final String MATCH_ANY = ".*";
