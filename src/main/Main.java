@@ -18,6 +18,7 @@ public class Main {
     public static void main(String[] args) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             List<String> timeLines = new ArrayList<>();
+            System.out.println("Enter input data (empty line for ending input)");
             String line = reader.readLine();
             while (!(line = reader.readLine()).isEmpty()) {
                 timeLines.add(line);

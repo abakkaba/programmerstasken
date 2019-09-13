@@ -5,6 +5,7 @@ import main.util.Formatting;
 import java.util.Date;
 
 import static main.util.Constants.HYPHEN;
+import static main.util.Constants.MAX_DATE;
 
 /**
  * @author Sergey Moroz
@@ -20,7 +21,7 @@ public class QueryLine extends Line {
         super(id, serviceID, questionType, responseType);
         String[] date = responseDate.split(HYPHEN);
         this.dateFrom = Formatting.parseDate(date[0], id);
-        this.dateTo = (date.length > 1) ? Formatting.parseDate(date[1], id) : null;
+        this.dateTo = (date.length > 1) ? Formatting.parseDate(date[1], id) : MAX_DATE;
     }
 
     public Date getDateFrom() {

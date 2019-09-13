@@ -24,9 +24,18 @@ public class TimeLine extends Line {
         if (queryLine == null) {
             return false;
         }
-        //todo: implement logic
 
-        return false;
+        String service = Formatting.toPattern(queryLine.getServiceID());
+        String question = Formatting.toPattern(queryLine.getQuestionType());
+        String response = queryLine.getResponseType();
+        Date from = queryLine.getDateFrom();
+        Date to = queryLine.getDateTo();
+
+        return getServiceID().matches(service) &&
+                getQuestionType().matches(question) &&
+                getResponseType().equals(response) &&
+                getResponseDate().compareTo(from) >= 0 &&
+                getResponseDate().compareTo(to) < 0;
     }
 
     public Date getResponseDate() {
